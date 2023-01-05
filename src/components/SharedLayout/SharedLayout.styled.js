@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
  
-// import { theme } from '../../constants';
 
 export const Container = styled.div`
   max-width: 1080px;
@@ -14,9 +13,9 @@ export const Header = styled.header`
   align-items: center;
   justify-content: space-between;
   gap: ${p => p.theme.sizes.m};
-  padding: 8px 0;
-  margin-bottom: 16px;
-   
+
+  margin-bottom: ${p => p.theme.sizes.m};
+
   height: ${p => p.theme.sizes.xxl};
 
   > nav {
@@ -24,14 +23,14 @@ export const Header = styled.header`
   }
 `;
 
-export const Link = styled(NavLink)`
+export const StyledNavLink = styled(NavLink)`
   padding: ${p => p.theme.sizes.m};
-  
+  border-radius: ${p => p.theme.radii.md};
   text-decoration: none;
-  color: black;
-  font-weight: 500;
-  margin:  ${p => p.theme.sizes.m};
-   background-color: ${p => p.theme.colors.bgLight};
+  color: ${p => p.theme.colors.dark};
+  font-weight: ${p => p.theme.sizes.xl};
+  margin: ${p => p.theme.sizes.m};
+  background-color: ${p => p.theme.colors.bgLight};
   &.active {
     color: white;
     background-color: ${p => p.theme.colors.bgAccent};

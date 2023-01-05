@@ -1,11 +1,11 @@
-import { HiArrowLeft } from 'react-icons/hi';
+import { TiArrowLeftOutline } from 'react-icons/ti';
 
 import { StyledLink } from './BackButton.styled';
 
 export const BackButton = ({ back, children }) => {
   return (
     <StyledLink to={back}>
-      <HiArrowLeft size="24" />
+      <TiArrowLeftOutline size="36" color="blue" />
       {children}
     </StyledLink>
   );

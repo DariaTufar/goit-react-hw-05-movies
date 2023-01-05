@@ -19,6 +19,7 @@ export const theme = {
     bgHover: '#6096ba', // light  green
     textPrimary: 'white',
     textAccent: '#6096ba', // darker blue cerulean frost
+    dark: "black",
   },
 
   sizes: {

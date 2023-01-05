@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+ 
 
 export const List = styled.ul`
   padding-left: 100px;
@@ -6,9 +7,9 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
-  padding-bottom: 10px;
+  padding-bottom: ${p => p.theme.sizes.m};
   :hover {
-    color: teal;
+    color: ${p => p.theme.colors.bgAccent};
     font-weight: bold;
   }
 `;

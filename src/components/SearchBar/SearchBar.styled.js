@@ -4,10 +4,10 @@ import { HiSearch } from 'react-icons/hi';
 export const Wrapper = styled.div`
   z-index: 1100;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 24px;
-  border-color: teal;
+  justify-content: left;
+  align-items: right;
+  padding: ${p => p.theme.sizes.l};
+  border-color: ${p => p.theme.colors.bgAccent}; ;
 `;
 
 export const Form = styled.form`
@@ -15,8 +15,8 @@ export const Form = styled.form`
   align-items: center;
   width: 100%;
   max-width: 500px;
-  border: 2px solid teal;
-  border-radius: 5px;
+  border: 2px solid ${p => p.theme.colors.bgAccent};
+  border-radius: ${p => p.theme.radii.md};
   overflow: hidden;
   background-color: #fff;
 `;
@@ -25,23 +25,22 @@ export const Input = styled.input`
   display: inline-block;
   width: 100%;
   font: inherit;
-  font-size: 20px;
+  font-size: ${p => p.theme.sizes.m};
   border: none;
   outline: none;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding: ${p => p.theme.sizes.xs};
   ::placeholder {
     font: inherit;
-    font-size: 18px;
+    font-size: ${p => p.theme.sizes.l};
   }
 `;
 
 export const SearchButton = styled.button`
   display: inline-block;
-  width: 48px;
-  height: 48px;
+  width: ${p => p.theme.sizes.xl};
+  height: ${p => p.theme.sizes.xl};
   border: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity ${p => p.theme.styles.transition};
   cursor: pointer;
   outline: none;
   :hover {
@@ -50,7 +49,7 @@ export const SearchButton = styled.button`
 `;
 
 export const Icon = styled(HiSearch)`
-  width: 32px;
-  height: 32px;
-  fill: teal;
+  width: ${p => p.theme.sizes.l};
+  height: ${p => p.theme.sizes.l};
+  fill: ${p => p.theme.colors.bgAccent}; ;
 `;

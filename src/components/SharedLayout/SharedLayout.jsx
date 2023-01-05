@@ -2,12 +2,12 @@ import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import { Loader } from 'components/Loader/Loader';
 import backgroundImage from  '../../images/blue_background_curtains.jpg';
-import { theme } from '../../constants';
+ 
 
 import {
-    Container,
-    Header,
-    Link
+  Container,
+  Header,
+  StyledNavLink
 } from './SharedLayout.styled';
 
 export const SharedLayout = () => {
@@ -20,10 +20,11 @@ export const SharedLayout = () => {
         }}
       >
         <nav>
-          <Link to="/" end>
-            Home
-          </Link>
-          <Link to="/movies">Movies</Link>
+            <StyledNavLink to="/" end>
+              Home
+            </StyledNavLink>
+       
+          <StyledNavLink to="/movies">Movies</StyledNavLink>
         </nav>
       </Header>
       <Suspense fallback={<Loader />}>
