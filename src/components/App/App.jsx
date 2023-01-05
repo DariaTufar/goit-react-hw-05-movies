@@ -1,22 +1,21 @@
 import { Routes, Route } from 'react-router-dom';
-import React  from 'react';
+import  { lazy } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-import  Home from 'pages/Home';
-import  Movies from 'pages/Movies';
-import NotFound from 'pages/NotFound';
 
 import { SharedLayout } from 'components/SharedLayout';
 import { GlobalStyle } from 'components/GlobalStyle';
 import { Box } from 'components/Box';
 
-import  Cast   from 'components/Cast';
-import  Reviews  from 'components/Reviews' ;
-import  MovieDetails  from 'pages/MovieDetails';
+const  Home = lazy (() => import ('../../pages/Home'));
+const Movies = lazy(() => import('../../pages/Movies'));
+const NotFound = lazy ( () => import ('../../pages/NotFound'));
 
+const Cast = lazy(() => import('../../components/Cast')); 
+const Reviews = lazy(() => import('../../components/Reviews'));
+const MovieDetails = lazy(() => import('../../pages/MovieDetails'));
 
-  const App = () => {
+const App = () => {
   return (
     <Box>
       <Routes>
@@ -36,5 +35,4 @@ import  MovieDetails  from 'pages/MovieDetails';
   );
 };
 
- 
 export default App;

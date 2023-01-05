@@ -26,17 +26,16 @@ export const TitleOverview = styled.h3`
 `;
 
 export const Information = styled.div`
-  padding: 40px 0 40px 100px;
+  padding: ${p => p.theme.sizes.xl};
   border-bottom: solid ${p => p.theme.colors.bgAccent};
-;
 `;
 
 export const Item = styled.li`
-  padding-bottom: 10px;
-  font-size: 20px;
+  padding: ${p => p.theme.sizes.s};
+  font-size: ${p => p.theme.sizes.l};
   :hover {
     text-decoration: underline;
-    color: teal;
+    color: ${p => p.theme.colors.bgAccent};
     font-weight: bold;
   }
 `;
