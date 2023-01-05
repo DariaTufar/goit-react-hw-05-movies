@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/273.c64c7f7e.chunk.js","mappings":"+LAMA,EANiB,WAKhB,C","sources":["pages/NotFound/NotFound.jsx"],"sourcesContent":["const NotFound = () => {\n  <main style={{ textAlign: 'center' }}>\n    <b style={{ fontSize: 72 }}>404</b>\n    <p>Sorry, we couldn't find that movie</p>\n  </main>;\n};\nexport default NotFound;\n"],"names":[],"sourceRoot":""}
